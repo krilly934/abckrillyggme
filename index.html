@@ -708,10 +708,6 @@
         <p><i class="fas fa-boxes"></i> Sistem Inventory</p>
         <p><i class="fas fa-network-wired"></i> Jaringan Komputer</p>
       </div>
-      
-      <button class="download-btn" id="downloadBtn">
-        <i class="fas fa-download"></i> Download CV
-      </button>
     </div>
 
     <div class="right-column">
@@ -903,15 +899,6 @@
       if (event.target === modal) {
         closeModal();
       }
-    });
-    
-    // Download CV button
-    const downloadBtn = document.getElementById('downloadBtn');
-    
-    downloadBtn.addEventListener('click', () => {
-      // In a real implementation, this would link to a PDF file
-      alert('Fitur download CV akan mengarahkan ke file PDF. Untuk demo ini, tombol hanya menampilkan alert.');
-      // window.location.href = 'cv_kevin_sp.pdf';
     });
     
     // Smooth scroll for anchor links
