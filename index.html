@@ -397,7 +397,7 @@
     <p class="profile-text">Spesialis sistem inventory dengan keahlian jaringan, passionate tentang mengoptimalkan operasi gudang melalui teknologi dan otomatisasi.</p>
 
     <div class="social-links">
-      <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://id.linkedin.com/in/kevin-surya-prihatyo-20819b30b&ved=2ahUKEwj5i4_47NmNAxUe7TgGHeHxJlcQFnoECBUQAQ&usg=AOvVaw2yMHeIIDJto8uBtbJjpVsP" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+      <a href="https://id.linkedin.com/in/kevin-surya-prihatyo-20819b30b" title="LinkedIn" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-linkedin-in"></i>
       </a>
       <a href="https://instagram.com/zerogravityss" title="Instagram" target="_blank" rel="noopener noreferrer">
@@ -418,23 +418,83 @@
       <p><i class="fas fa-map-marker-alt"></i>Bekasi, Indonesia</p>
     </div>
 
-    <div class="section">
-      <h2><i class="fas fa-language"></i> Bahasa</h2>
-      <div class="language-container">
-        <div class="language-item">
-          <div class="language-circle">
-            <span>90%</span>
-          </div>
-          <span>Indonesia</span>
-        </div>
-        <div class="language-item">
-          <div class="language-circle" style="background: conic-gradient(var(--primary) 0% 75%, #333 75% 100%)">
-            <span>75%</span>
-          </div>
-          <span>Inggris</span>
-        </div>
+  <style>
+  .section {
+    padding: 2rem;
+    color: #fff;
+    background: #1e1e1e;
+    border-radius: 1rem;
+  }
+
+  .section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .language-container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .language-item {
+    text-align: center;
+  }
+
+  .language-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(var(--primary, #4db8ff) var(--percent), #333 var(--percent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .language-circle::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #1e1e1e;
+    border-radius: 50%;
+  }
+
+  .language-circle span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .language-item span:last-child {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+</style>
+
+<div class="section">
+  <h2><i class="fas fa-language"></i> Bahasa</h2>
+  <div class="language-container">
+    <div class="language-item">
+      <div class="language-circle" style="--percent: 95%">
+        <span>95%</span>
       </div>
+      <span>Indonesia</span>
     </div>
+    <div class="language-item">
+      <div class="language-circle" style="--percent: 80%">
+        <span>80%</span>
+      </div>
+      <span>English</span>
+    </div>
+  </div>
+</div>
 
     <div class="section hobbies">
       <h2><i class="fas fa-heart"></i> Minat</h2>
@@ -460,11 +520,11 @@
         <h3>SMKS Karya Bahana Mandiri 1</h3>
         <span class="date">Teknik Komputer dan Jaringan</span>
         <span class="date">2021 - 2024</span>
-        <span class="achievement-badge">Kelas Favorit Jurusan</span>
+        <span class="achievement-badge">Rank 5 Besar dari 37 Siswa</span>
       </div>
       <div class="timeline-item">
         <h3>Pembelajaran Mandiri</h3>
-        <span class="date">Berjalan</span>
+        <span class="date">Ongoing</span>
         <p>Jaringan komputer, otomatisasi inventory, dan optimasi sistem melalui kursus online dan proyek praktikal.</p>
       </div>
     </div>
@@ -505,8 +565,8 @@
     <div class="section">
       <h2><i class="fas fa-star"></i> Proyek</h2>
       <div class="timeline-item">
-        <h3>Dashboard Inventory Pintar</h3>
-        <span class="date">Mei 2025</span>
+        <h3>Excel Automatic Warehouse & Stock</h3>
+        <span class="date">November 2024</span>
         <ul>
           <li>Membuat Excel Inventory Automatic dalam penambahan, pengurangan, dan real-time stok</li>
           <li>Mengurangi waktu pencatatan manual sebesar 70%</li>
@@ -515,7 +575,7 @@
       </div>
       <div class="timeline-item">
         <h3>Automatic Bulk Email Sender</h3>
-        <span class="date">Maret 2025</span>
+        <span class="date">Mei 2025</span>
         <ul>
           <li>Membuat sistem otomatis pengirim email dengan text yang sudah dibuat</li>
           <li>Subjek dan isi yang berbeda untuk setiap email</li>
@@ -526,16 +586,76 @@
 
     <div class="section">
       <h2><i class="fas fa-certificate"></i> Sertifikasi</h2>
-      <div class="timeline-item">
-        <h3>Praktik Kerja Lapangan</h3>
-        <span class="date">2022 / PT JU AHN Indonesia</span>
-        <p>Sertifikat.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>EF Standard English Test</h3>
-        <span class="date">2024 / Score 56/100</span>
-        <p>Bahasa Inggris dengan kelas Conversation, Asking, dan bahasa setiap harinya.</p>
-      </div>
+    <!-- HTML -->
+<div class="timeline-item">
+  <h3>Sertifikat PKL</h3>
+  <span class="date">2022</span>
+  <button onclick="openModal()" class="preview-btn">
+    <i class="fas fa-eye"></i> Preview Sertifikat
+  </button>
+</div>
+
+<div id="certModal" class="modal">
+  <span onclick="closeModal()" class="close">&times;</span>
+  <img class="modal-content" id="certImage" src="sertifikatpkl.jpg">
+</div>
+
+<!-- CSS -->
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--primary);
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .preview-btn {
+    background: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  function openModal() {
+    document.getElementById('certModal').style.display = "block";
+  }
+  function closeModal() {
+    document.getElementById('certModal').style.display = "none";
+  }
+</script>
+   <div class="timeline-item">
+  <h3>EF Standard English Test</h3>
+  <span class="date">2024 / Score 56/100 (B2 Upper Intermediate)</span>
+  <p>
+    <a href="https://www.efset.org/cert/qxQ5nc" target="_blank" style="color: var(--primary); text-decoration: none;">
+      <i class="fas fa-external-link-alt"></i> Lihat Sertifikat Resmi
+    </a>
+    <p>Sertifikat Bahasa Inggris untuk sehari-hari dalam berkomunikasi, negosiasi, dan percakapan.</p>
+  </p>
+</div>
     </div>
   </div>
 
