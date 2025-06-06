@@ -17,34 +17,43 @@
       --success: #4CAF50;
     }
     
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--secondary);
       color: var(--text);
-      display: flex;
-      min-height: 100vh;
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .left-column {
-      width: 30%;
       background-color: var(--card-bg);
-      padding: 30px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       position: relative;
       box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+      z-index: 2;
     }
 
     .profile-pic {
-      width: 180px;
-      height: 180px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid var(--primary);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       transition: all 0.3s ease;
       box-shadow: 0 5px 15px rgba(0,188,212,0.3);
     }
@@ -56,8 +65,8 @@
 
     h1 {
       color: var(--primary);
-      margin-bottom: 30px;
-      font-size: 28px;
+      margin-bottom: 20px;
+      font-size: 24px;
       text-align: center;
       position: relative;
     }
@@ -74,7 +83,7 @@
     }
 
     .section {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       width: 100%;
       transition: all 0.3s ease;
       background-color: rgba(255,255,255,0.05);
@@ -100,17 +109,18 @@
 
     h2 i {
       margin-right: 10px;
+      font-size: 16px;
     }
 
     .right-column {
-      width: 70%;
-      padding: 40px;
+      padding: 20px;
       background-color: var(--secondary);
+      flex: 1;
     }
 
     .timeline-item {
-      margin-bottom: 25px;
-      padding-left: 25px;
+      margin-bottom: 20px;
+      padding-left: 20px;
       border-left: 3px solid var(--timeline);
       position: relative;
       transition: all 0.3s ease;
@@ -140,7 +150,7 @@
     .timeline-item h3 {
       margin: 0 0 5px 0;
       color: var(--primary);
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .timeline-item .date {
@@ -155,12 +165,13 @@
     }
 
     .contact-info p, .hobbies p {
-      margin: 15px 0;
+      margin: 12px 0;
       display: flex;
       align-items: center;
       transition: all 0.3s ease;
       padding: 8px;
       border-radius: 5px;
+      font-size: 14px;
     }
 
     .contact-info p:hover, .hobbies p:hover {
@@ -169,22 +180,25 @@
     }
 
     .contact-info i, .hobbies i {
-      margin-right: 15px;
-      width: 20px;
+      margin-right: 12px;
+      width: 18px;
       text-align: center;
       color: var(--primary);
+      font-size: 14px;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 18px;
+      margin: 10px 0;
     }
 
     ul li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       position: relative;
       list-style-type: none;
-      padding-left: 25px;
+      padding-left: 22px;
       transition: all 0.3s ease;
+      font-size: 14px;
     }
 
     ul li:hover {
@@ -201,15 +215,15 @@
     .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 10px;
     }
 
     .skill-chip {
       background-color: rgba(0,188,212,0.2);
       color: var(--primary);
-      padding: 8px 15px;
+      padding: 6px 12px;
       border-radius: 20px;
-      font-size: 14px;
+      font-size: 13px;
       transition: all 0.3s ease;
       border: 1px solid var(--primary);
       display: flex;
@@ -218,6 +232,7 @@
 
     .skill-chip i {
       margin-right: 5px;
+      font-size: 12px;
     }
 
     .skill-chip:hover {
@@ -229,24 +244,25 @@
 
     .profile-text {
       text-align: center;
-      font-size: 15px;
-      line-height: 1.7;
-      padding: 0 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 0 5px;
+      margin-bottom: 15px;
     }
 
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
+      gap: 15px;
+      margin: 15px 0;
     }
 
     .social-links a {
       color: var(--text);
-      font-size: 20px;
+      font-size: 18px;
       transition: all 0.3s ease;
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -260,30 +276,10 @@
       background-color: rgba(0,188,212,0.2);
     }
 
-    /* Fitur Baru */
-    .progress-container {
-      width: 100%;
-      margin-top: 15px;
-    }
-
-    .progress-bar {
-      height: 8px;
-      background-color: #333;
-      border-radius: 4px;
-      margin-bottom: 15px;
-      overflow: hidden;
-    }
-
-    .progress {
-      height: 100%;
-      background-color: var(--primary);
-      border-radius: 4px;
-      transition: width 1s ease-in-out;
-    }
-
     .language-container {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 15px;
       margin-top: 15px;
     }
@@ -292,13 +288,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex: 1;
+      min-width: 100px;
     }
 
     .language-circle {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      background: conic-gradient(var(--primary) 0% 80%, #333 80% 100%);
+      background: conic-gradient(var(--primary) 0% var(--percent), #333 var(--percent) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -309,8 +307,8 @@
     .language-circle::before {
       content: '';
       position: absolute;
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background-color: var(--card-bg);
     }
@@ -319,22 +317,29 @@
       position: relative;
       font-weight: bold;
       color: var(--primary);
+      font-size: 14px;
+    }
+
+    .language-item span:last-child {
+      font-size: 13px;
+      text-align: center;
     }
 
     .download-btn {
       display: inline-block;
       background-color: var(--primary);
       color: var(--secondary);
-      padding: 10px 20px;
+      padding: 10px 15px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 15px;
       transition: all 0.3s ease;
       text-align: center;
       border: none;
       cursor: pointer;
       width: 100%;
+      font-size: 14px;
     }
 
     .download-btn:hover {
@@ -347,29 +352,117 @@
       display: inline-block;
       background-color: rgba(76, 175, 80, 0.2);
       color: var(--success);
-      padding: 5px 10px;
+      padding: 4px 8px;
       border-radius: 15px;
-      font-size: 12px;
-      margin-left: 10px;
+      font-size: 11px;
+      margin-left: 8px;
       border: 1px solid var(--success);
     }
 
-    @media (max-width: 768px) {
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      overflow: auto;
+    }
+    
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: var(--primary);
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    
+    .preview-btn {
+      background: var(--primary-dark);
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 8px;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .preview-btn i {
+      font-size: 12px;
+    }
+
+    /* Dark mode toggle */
+    .dark-mode-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border: none;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .dark-mode-toggle:hover {
+      transform: scale(1.1) rotate(30deg);
+    }
+
+    /* Print styles */
+    @media print {
       body {
-        flex-direction: column;
+        background-color: white;
+        color: black;
       }
-      
-      .left-column, .right-column {
-        width: 100%;
-        padding: 20px;
-      }
-      
       .left-column {
-        order: 1;
+        background-color: #f5f5f5 !important;
+        color: #333 !important;
       }
-      
       .right-column {
-        order: 2;
+        background-color: white !important;
+        color: #333 !important;
+      }
+      .section {
+        background-color: #f9f9f9 !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+      }
+      .skill-chip {
+        background-color: #e0e0e0 !important;
+        color: #333 !important;
+        border: 1px solid #ccc !important;
+      }
+      .social-links, .dark-mode-toggle {
+        display: none !important;
       }
     }
 
@@ -388,285 +481,480 @@
     .section:nth-child(3) { animation-delay: 0.3s; }
     .section:nth-child(4) { animation-delay: 0.4s; }
     .section:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Responsive layout */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+      
+      .left-column {
+        width: 30%;
+        min-width: 300px;
+        max-width: 350px;
+        padding: 30px;
+      }
+      
+      .right-column {
+        width: 70%;
+        padding: 40px;
+      }
+      
+      .profile-pic {
+        width: 180px;
+        height: 180px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      .section {
+        padding: 20px;
+      }
+      
+      h2 {
+        font-size: 20px;
+      }
+      
+      h2 i {
+        font-size: 18px;
+      }
+      
+      .contact-info p, .hobbies p {
+        font-size: 15px;
+      }
+      
+      ul li {
+        font-size: 15px;
+      }
+      
+      .skill-chip {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+      
+      .profile-text {
+        font-size: 15px;
+      }
+      
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .right-column {
+        padding: 50px;
+      }
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      z-index: 99;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border: none;
+      font-size: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    /* Hamburger menu for mobile */
+    .mobile-menu-btn {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
+      background: var(--primary);
+      color: var(--secondary);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 767px) {
+      .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .left-column {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+      }
+      
+      .left-column.active {
+        left: 0;
+      }
+      
+      .right-column {
+        padding-top: 70px;
+      }
+      
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="left-column">
-    <img src="kevin.jpg" alt="Kevin S.P" class="profile-pic">
-    <h1>Kevin Surya Prihatyo</h1>
-    <p class="profile-text">Spesialis sistem inventory dengan keahlian jaringan, passionate tentang mengoptimalkan operasi gudang melalui teknologi dan otomatisasi.</p>
-
-    <div class="social-links">
-      <a href="https://id.linkedin.com/in/kevin-surya-prihatyo-20819b30b" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://instagram.com/zerogravityss" title="Instagram" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="mailto:kevinsurya439@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-    </div>
-
-    <div class="section">
-      <h2><i class="fas fa-user"></i> Profil</h2>
-      <p class="profile-text">Mempunyai dedikasi yang tinggi, Self-Focused & Self-Motivated, Critical Thinking, serta re-orientasi terhadap suatu masalah yang ada.</p>
-    </div>
-
-    <div class="section contact-info">
-      <h2><i class="fas fa-address-card"></i> Kontak</h2>
-      <p><i class="fas fa-phone"></i>+62 857 1632 7673</p>
-      <p><i class="fas fa-envelope"></i>kevinsurya439@gmail.com</p>
-      <p><i class="fas fa-map-marker-alt"></i>Bekasi, Indonesia</p>
-    </div>
-
-  <style>
-  .section {
-    padding: 2rem;
-    color: #fff;
-    background: #1e1e1e;
-    border-radius: 1rem;
-  }
-
-  .section h2 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .language-container {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .language-item {
-    text-align: center;
-  }
-
-  .language-circle {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: conic-gradient(var(--primary, #4db8ff) var(--percent), #333 var(--percent));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-
-  .language-circle::before {
-    content: "";
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    background: #1e1e1e;
-    border-radius: 50%;
-  }
-
-  .language-circle span {
-    position: relative;
-    z-index: 1;
-  }
-
-  .language-item span:last-child {
-    display: block;
-    margin-top: 0.5rem;
-    font-size: 1rem;
-  }
-</style>
-
-<div class="section">
-  <h2><i class="fas fa-language"></i> Bahasa</h2>
-  <div class="language-container">
-    <div class="language-item">
-      <div class="language-circle" style="--percent: 95%">
-        <span>95%</span>
-      </div>
-      <span>Indonesia</span>
-    </div>
-    <div class="language-item">
-      <div class="language-circle" style="--percent: 80%">
-        <span>80%</span>
-      </div>
-      <span>English</span>
-    </div>
-  </div>
-</div>
-
-    <div class="section hobbies">
-      <h2><i class="fas fa-heart"></i> Minat</h2>
-      <p><i class="fas fa-guitar"></i> Musik</p>
-      <p><i class="fas fa-tools"></i> Eksperimen Software</p>
-      <p><i class="fas fa-boxes"></i> Sistem Inventory</p>
-      <p><i class="fas fa-network-wired"></i> Jaringan Komputer</p>
-    </div>
-  </div>
-
-  <div class="right-column">
-    <div class="section">
-      <h2><i class="fas fa-graduation-cap"></i> Timeline Pendidikan</h2>
-      <div class="timeline-item">
-        <h3>SDN 03 Tambun Utara</h3>
-        <span class="date">2012 - 2018</span>
-      </div>
-      <div class="timeline-item">
-        <h3>SMPN 03 Tambun Selatan</h3>
-        <span class="date">2018 - 2021</span>
-      </div>
-      <div class="timeline-item">
-        <h3>SMKS Karya Bahana Mandiri 1</h3>
-        <span class="date">Teknik Komputer dan Jaringan</span>
-        <span class="date">2021 - 2024</span>
-        <span class="achievement-badge">Rank 5 Besar dari 37 Siswa</span>
-      </div>
-      <div class="timeline-item">
-        <h3>Pembelajaran Mandiri</h3>
-        <span class="date">Ongoing</span>
-        <p>Jaringan komputer, otomatisasi inventory, dan optimasi sistem melalui kursus online dan proyek praktikal.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2><i class="fas fa-briefcase"></i> Pengalaman</h2>
-      <div class="timeline-item">
-        <h3>PT Mustika Memadata / Warehouse & Inventory Project</h3>
-        <span class="date">November 2024 - Mei 2025</span>
-        <ul>
-          <li>Mengembangkan sistem manajemen gudang komprehensif dari sistem input manual buku menjadi di Excel</li>
-          <li>Menangani 50+ kategori item dan 7.000+ stok barang</li>
-          <li>Menerapkan peringatan stok otomatis ke pengguna</li>
-          <li>Membuat pemantauan level stok real-time</li>
-        </ul>
-      </div>
-      <div class="timeline-item">
-        <h3>Helper Maintenance</h3>
-        <span class="date">Oktober 2022 - Desember 2022</span>
-        <p>(Praktik Kerja Lapangan) Membantu Input Admin Warehouse, Perbaikan & Perawatan Area Kerja.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2><i class="fas fa-code"></i> Keahlian Teknis</h2>
-      <div class="skills-container">
-        <div class="skill-chip"><i class="fas fa-warehouse"></i> Sistem Inventory</div>
-        <div class="skill-chip"><i class="fas fa-file-excel"></i> Otomatisasi Excel</div>
-        <div class="skill-chip"><i class="fas fa-network-wired"></i> Jaringan Cisco</div>
-        <div class="skill-chip"><i class="fas fa-wifi"></i> Konfigurasi WiFi Mikrotik</div>
-        <div class="skill-chip"><i class="fas fa-cogs"></i> Optimasi Sistem</div>
-        <div class="skill-chip"><i class="fas fa-bug"></i> Troubleshooting</div>
-        <div class="skill-chip"><i class="fas fa-database"></i> Manajemen Database</div>
-        <div class="skill-chip"><i class="fas fa-envelope"></i> Email Automation</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2><i class="fas fa-star"></i> Proyek</h2>
-      <div class="timeline-item">
-        <h3>Excel Automatic Warehouse & Stock</h3>
-        <span class="date">November 2024</span>
-        <ul>
-          <li>Membuat Excel Inventory Automatic dalam penambahan, pengurangan, dan real-time stok</li>
-          <li>Mengurangi waktu pencatatan manual sebesar 70%</li>
-          <li>Meminimalisir kesalahan input data</li>
-        </ul>
-      </div>
-      <div class="timeline-item">
-        <h3>Automatic Bulk Email Sender</h3>
-        <span class="date">Mei 2025</span>
-        <ul>
-          <li>Membuat sistem otomatis pengirim email dengan text yang sudah dibuat</li>
-          <li>Subjek dan isi yang berbeda untuk setiap email</li>
-          <li>Customisasi waktu pengiriman</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2><i class="fas fa-certificate"></i> Sertifikasi</h2>
-    <!-- HTML -->
-<div class="timeline-item">
-  <h3>Sertifikat PKL</h3>
-  <span class="date">2022</span>
-  <button onclick="openModal()" class="preview-btn">
-    <i class="fas fa-eye"></i> Preview Sertifikat
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars"></i>
   </button>
-</div>
+  
+  <div class="overlay" id="overlay"></div>
 
-<div id="certModal" class="modal">
-  <span onclick="closeModal()" class="close">&times;</span>
-  <img class="modal-content" id="certImage" src="sertifikatpkl.jpg">
-</div>
+  <div class="container">
+    <div class="left-column" id="leftColumn">
+      <img src="kevin.jpg" alt="Kevin S.P" class="profile-pic">
+      <h1>Kevin Surya Prihatyo</h1>
+      <p class="profile-text">Spesialis sistem inventory dengan keahlian jaringan, passionate tentang mengoptimalkan operasi gudang melalui teknologi dan otomatisasi.</p>
 
-<!-- CSS -->
-<style>
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-  }
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-  }
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: var(--primary);
-    font-size: 40px;
-    cursor: pointer;
-  }
-  .preview-btn {
-    background: var(--primary-dark);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-</style>
+      <div class="social-links">
+        <a href="https://id.linkedin.com/in/kevin-surya-prihatyo-20819b30b" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com/zerogravityss" title="Instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:kevinsurya439@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
 
-<!-- JavaScript -->
-<script>
-  function openModal() {
-    document.getElementById('certModal').style.display = "block";
-  }
-  function closeModal() {
-    document.getElementById('certModal').style.display = "none";
-  }
-</script>
-   <div class="timeline-item">
-  <h3>EF Standard English Test</h3>
-  <span class="date">2024 / Score 56/100 (B2 Upper Intermediate)</span>
-  <p>
-    <a href="https://www.efset.org/cert/qxQ5nc" target="_blank" style="color: var(--primary); text-decoration: none;">
-      <i class="fas fa-external-link-alt"></i> Lihat Sertifikat Resmi
-    </a>
-    <p>Sertifikat Bahasa Inggris untuk sehari-hari dalam berkomunikasi, negosiasi, dan percakapan.</p>
-  </p>
-</div>
+      <div class="section">
+        <h2><i class="fas fa-user"></i> Profil</h2>
+        <p class="profile-text">Mempunyai dedikasi yang tinggi, Self-Focused & Self-Motivated, Critical Thinking, serta re-orientasi terhadap suatu masalah yang ada.</p>
+      </div>
+
+      <div class="section contact-info">
+        <h2><i class="fas fa-address-card"></i> Kontak</h2>
+        <p><i class="fas fa-phone"></i>+62 857 1632 7673</p>
+        <p><i class="fas fa-envelope"></i>kevinsurya439@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i>Bekasi, Indonesia</p>
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-language"></i> Bahasa</h2>
+        <div class="language-container">
+          <div class="language-item">
+            <div class="language-circle" style="--percent: 95%">
+              <span>95%</span>
+            </div>
+            <span>Indonesia</span>
+          </div>
+          <div class="language-item">
+            <div class="language-circle" style="--percent: 80%">
+              <span>80%</span>
+            </div>
+            <span>English</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section hobbies">
+        <h2><i class="fas fa-heart"></i> Minat</h2>
+        <p><i class="fas fa-guitar"></i> Musik</p>
+        <p><i class="fas fa-tools"></i> Eksperimen Software</p>
+        <p><i class="fas fa-boxes"></i> Sistem Inventory</p>
+        <p><i class="fas fa-network-wired"></i> Jaringan Komputer</p>
+      </div>
+      
+      <button class="download-btn" id="downloadBtn">
+        <i class="fas fa-download"></i> Download CV
+      </button>
+    </div>
+
+    <div class="right-column">
+      <div class="section">
+        <h2><i class="fas fa-graduation-cap"></i> Timeline Pendidikan</h2>
+        <div class="timeline-item">
+          <h3>SDN 03 Tambun Utara</h3>
+          <span class="date">2012 - 2018</span>
+        </div>
+        <div class="timeline-item">
+          <h3>SMPN 03 Tambun Selatan</h3>
+          <span class="date">2018 - 2021</span>
+        </div>
+        <div class="timeline-item">
+          <h3>SMKS Karya Bahana Mandiri 1</h3>
+          <span class="date">Teknik Komputer dan Jaringan</span>
+          <span class="date">2021 - 2024</span>
+          <span class="achievement-badge">Rank 5 Besar dari 37 Siswa</span>
+        </div>
+        <div class="timeline-item">
+          <h3>Pembelajaran Mandiri</h3>
+          <span class="date">Ongoing</span>
+          <p>Jaringan komputer, otomatisasi inventory, dan optimasi sistem melalui kursus online dan proyek praktikal.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-briefcase"></i> Pengalaman</h2>
+        <div class="timeline-item">
+          <h3>PT Mustika Memadata / Warehouse & Inventory Project</h3>
+          <span class="date">November 2024 - Mei 2025</span>
+          <ul>
+            <li>Mengembangkan sistem manajemen gudang komprehensif dari sistem input manual buku menjadi di Excel</li>
+            <li>Menangani 50+ kategori item dan 7.000+ stok barang</li>
+            <li>Menerapkan peringatan stok otomatis ke pengguna</li>
+            <li>Membuat pemantauan level stok real-time</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>Helper Maintenance</h3>
+          <span class="date">Oktober 2022 - Desember 2022</span>
+          <p>(Praktik Kerja Lapangan) Membantu Input Admin Warehouse, Perbaikan & Perawatan Area Kerja.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-code"></i> Keahlian Teknis</h2>
+        <div class="skills-container">
+          <div class="skill-chip"><i class="fas fa-warehouse"></i> Sistem Inventory</div>
+          <div class="skill-chip"><i class="fas fa-file-excel"></i> Otomatisasi Excel</div>
+          <div class="skill-chip"><i class="fas fa-network-wired"></i> Jaringan Cisco</div>
+          <div class="skill-chip"><i class="fas fa-wifi"></i> Konfigurasi WiFi Mikrotik</div>
+          <div class="skill-chip"><i class="fas fa-cogs"></i> Optimasi Sistem</div>
+          <div class="skill-chip"><i class="fas fa-bug"></i> Troubleshooting</div>
+          <div class="skill-chip"><i class="fas fa-database"></i> Manajemen Database</div>
+          <div class="skill-chip"><i class="fas fa-envelope"></i> Email Automation</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-star"></i> Proyek</h2>
+        <div class="timeline-item">
+          <h3>Excel Automatic Warehouse & Stock</h3>
+          <span class="date">November 2024</span>
+          <ul>
+            <li>Membuat Excel Inventory Automatic dalam penambahan, pengurangan, dan real-time stok</li>
+            <li>Mengurangi waktu pencatatan manual sebesar 70%</li>
+            <li>Meminimalisir kesalahan input data</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>Automatic Bulk Email Sender</h3>
+          <span class="date">Mei 2025</span>
+          <ul>
+            <li>Membuat sistem otomatis pengirim email dengan text yang sudah dibuat</li>
+            <li>Subjek dan isi yang berbeda untuk setiap email</li>
+            <li>Customisasi waktu pengiriman</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-certificate"></i> Sertifikasi</h2>
+        <div class="timeline-item">
+          <h3>Sertifikat PKL</h3>
+          <span class="date">2022</span>
+          <button onclick="openModal()" class="preview-btn">
+            <i class="fas fa-eye"></i> Preview Sertifikat
+          </button>
+        </div>
+
+        <div id="certModal" class="modal">
+          <span onclick="closeModal()" class="close">&times;</span>
+          <img class="modal-content" id="certImage" src="sertifikatpkl.jpg" alt="Sertifikat PKL">
+        </div>
+
+        <div class="timeline-item">
+          <h3>EF Standard English Test</h3>
+          <span class="date">2024 / Score 56/100 (B2 Upper Intermediate)</span>
+          <p>
+            <a href="https://www.efset.org/cert/qxQ5nc" target="_blank" style="color: var(--primary); text-decoration: none;">
+              <i class="fas fa-external-link-alt"></i> Lihat Sertifikat Resmi
+            </a>
+          </p>
+          <p>Sertifikat Bahasa Inggris untuk sehari-hari dalam berkomunikasi, negosiasi, dan percakapan.</p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <button class="back-to-top" id="backToTop" title="Kembali ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </button>
 
   <script>
-    // Animasi progress bar saat halaman dimuat
-    document.addEventListener('DOMContentLoaded', function() {
-      const progressBars = document.querySelectorAll('.progress');
-      progressBars.forEach(bar => {
-        const width = bar.parentElement.getAttribute('data-progress');
-        bar.style.width = width;
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const leftColumn = document.getElementById('leftColumn');
+    const overlay = document.getElementById('overlay');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      leftColumn.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+    
+    overlay.addEventListener('click', () => {
+      leftColumn.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
+    });
+    
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    let isDarkMode = true;
+    
+    darkModeToggle.addEventListener('click', () => {
+      isDarkMode = !isDarkMode;
+      
+      if (isDarkMode) {
+        document.documentElement.style.setProperty('--primary', '#00bcd4');
+        document.documentElement.style.setProperty('--primary-dark', '#008ba3');
+        document.documentElement.style.setProperty('--secondary', '#121212');
+        document.documentElement.style.setProperty('--text', '#f0f0f0');
+        document.documentElement.style.setProperty('--card-bg', '#1f1f1f');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      } else {
+        document.documentElement.style.setProperty('--primary', '#007acc');
+        document.documentElement.style.setProperty('--primary-dark', '#005c99');
+        document.documentElement.style.setProperty('--secondary', '#f5f5f5');
+        document.documentElement.style.setProperty('--text', '#333333');
+        document.documentElement.style.setProperty('--card-bg', '#ffffff');
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+    });
+    
+    // Modal functionality
+    function openModal() {
+      document.getElementById('certModal').style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById('certModal').style.display = "none";
+    }
+    
+    // Close modal when clicking outside the image
+    window.addEventListener('click', (event) => {
+      const modal = document.getElementById('certModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+    
+    // Download CV button
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    downloadBtn.addEventListener('click', () => {
+      // In a real implementation, this would link to a PDF file
+      alert('Fitur download CV akan mengarahkan ke file PDF. Untuk demo ini, tombol hanya menampilkan alert.');
+      // window.location.href = 'cv_kevin_sp.pdf';
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Animation for skills on scroll
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.skill-chip, .timeline-item');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    
+    // Set initial state for animation
+    document.querySelectorAll('.skill-chip, .timeline-item').forEach(element => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+      element.style.transition = 'all 0.5s ease';
+    });
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
   </script>
 </body>
 </html>
